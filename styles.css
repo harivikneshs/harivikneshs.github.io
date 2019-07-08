@@ -1,0 +1,16 @@
+html{
+	scroll-behavior: smooth;
+}
+body{
+	padding-top: 85px;
+	font-family: 'Open Sans', sans-serif;
+
+}
+
+.navi{
+	font-family: 'Montserrat', sans-serif;
+}
+
+.heading,h3{
+	font-family: 'Montserrat', sans-serif;
+}
