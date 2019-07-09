@@ -10,11 +10,12 @@
 
 	<link rel="stylesheet" type="text/css" href="styles.css">
 
+
 </head>
 <body>
 
-<div class="navi ">
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark " style="background-color: #000000">
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark navi" style="background-color: #000000">
 
 	
   <a class="navbar-brand " href="#" >Hariviknesh S</a>
@@ -26,41 +27,67 @@
     <div class="navbar-nav " data-toggle="collapse" data-target="#navbarNavAltMarkup" >
 
       <a class="nav-item nav-link" href="#about">About</a>
-      <a class="nav-item nav-link" href="#skills">Skills</a>
+      <!--<a class="nav-item nav-link" href="#skills">Skills</a>
       <a class="nav-item nav-link" href="#projects">Projects</a>
-      <a class="nav-item nav-link " href="#contact">Contact</a>
+      <a class="nav-item nav-link " href="#contact">Contact</a>-->
       <a class="nav-item nav-link " href="#resume">Resume</a>
     </div>
   </div>
 </nav>
+
+
+
+
+
+
+<div id="big" class="container-fluid ">
+	
+	<div class="row h-100 w-100 align-items-center  white">
+
+		
+		<div class="col-12 pl-3  pl-lg-5">
+		  <p id="typewriter" data-typewriter="I write code,I develop android apps,I build ML models"></p><span class="blinking-cursor">|</span>
 </div>
-
-
-
-
-
-<div id="big" class="container-fluid">
-	<center><img class="img-fluid p-5 " style="margin-top:65px;" src="images/photo_round.png"></center>	
-	<div class="row white">
-		<div class="col-12 align-self-center">
-			<center><h1 class="heading">HARIVIKNESH S</h1>
-
-			<p style="color: #ffffff80">3rd year undergraduate from NIT Puducherry</p></center>
-
 		</div>
+	</div>
 	</div>
 		
 		
 	</div>
 </div>
 
-<div id="about" class="container-fluid">
-	<div class="row">
-		<div class="col">
-			Hi there
+<div id="about" class="container-fluid h-100 ">
+	<div class="row h-100 align-items-center pt-5">
+		<div class="col-12 ">
+			<center><h2>About</h2></center><br>
+			<p class="px-lg-5" ><span style="font-size: 2em;">Hi</span>. I am Hariviknesh, a 3rd year undergraduate studying Electronics and communication engineering from National Institute of technology, Puducherry. Though I am from electronics background computer fascinates me more than petty circuits. I am skilled in developing native android apps and infact been one of the developer who developed app(s) for Mangoo, an online food delivery company like Swiggy in Karaikal<br><br>
+			I am also a Machine learning enthusiast with specific interests on Computer vision, Deep learning and Natural language processing. I have made few toy projects using the same. My current focus is on leveraging the power of Machine learning in android apps for solving day today problems<br><br>I like to learn and work on cutting edge latest technologies at the same time spend significant amount of time in learning core programming principles like data structures and algorithms. I also do competitive programming as a hobby </p>
+		</div>
+	</div>
+	
+</div>
+
+<div id="resume"  class="container-fluid h-100">
+	<div class="row h-100 align-items-center">
+		<div class="col-12" ><center><h2>Resume</h2></center>
+			<center><p class="px-lg-5">Thanks for spending your valuable time. Sure this site may not be exciting enough i agree. Stay tuned for further updates regarding my skills and projects in this website. <br><br>Check out my resume to know more about me and my projects</p>
+				<br>
+			<a class="btn btn-dark" href="resume_latest.pdf">Download Resume </a> </center>
+		</div>
+
+		
+			</div>
+		</div>
+</div>
+<div class="container-fluid " style="height: 8%;">
+	<div class="row h-100 align-items-center" style="background-color: black;">
+		<div class="col-12">
+			<center><div style="color: white;font-family: 'Montserrat', sans-serif; font-size: 1em">Designed by me: Hariviknesh</div></center>
 		</div>
 	</div>
 </div>
+
+
 
 
 
@@ -75,5 +102,78 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript">
+	var typewriter = function(txt) {
+    var container = document.getElementById('typewriter'),
+      speed = 28,
+      i = 0,
+      wordsObj = txt.split(" ")
+    container.textContent = "";
+    console.log(txt)
+    runAllWords();
+    function runAllWords() {
+
+      if (i < wordsObj.length) {
+        var a = (i == 0) ? i : i - 1;
+        setTimeout(function() {
+          showWord(wordsObj[i], 0)
+        }, wordsObj[a].length * speed);
+      }
+    }
+
+    function showWord(word, countWord) {
+      if (countWord < word.length) {
+        setTimeout(function() {
+          showLetter(word, countWord)
+        }, speed);
+      } else {
+        container.textContent = container.textContent + " ";
+        i += 1;
+        runAllWords();
+      }
+      if (i === wordsObj.length) {
+
+        console.log('complete')
+      }
+    }
+
+    function showLetter(word, countWord) {
+      container.textContent = container.textContent + word[countWord];
+      showWord(word, countWord + 1);
+    }
+  }
+  // window.onload = typewriter();
+// var container = document.getElementById('typewriter'),
+//   dataText = container.dataset.typewriter,
+//   splitTxt = dataText.split(",")
+// for (var x = 0, ln = splitTxt.length; x < ln; x++) {
+//   setTimeout(typewriter(splitTxt[x]), x * 9000, x);
+// }
+
+
+var i = 0;
+function myLoop () {  
+//  create a loop function
+	
+   var dataType = document.getElementById('typewriter').dataset.typewriter,
+       w = dataType.split(',')
+   setTimeout(function () {    //  call a 3s setTimeout when the loop is called
+      typewriter(w[i]);          //  your code here
+      i++;                     //  increment the counter
+      if (i < w.length) {            //  if the counter < 10, call the loop function
+         myLoop();             //  ..  again which will trigger another 
+      }else{
+      	i=0;
+      	myLoop();
+      }                       //  ..  setTimeout()
+   }, 3000)
+}
+
+myLoop();
+</script>
+
 </body>
 </html>
