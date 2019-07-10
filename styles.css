@@ -1,6 +1,19 @@
+@import "bootstrap"; 
+@import "bootstrap/functions";	
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+@include media-breakpoint-up(md) {
+  body{
+    font-size: 2rem;
+  }
+}
+
+
 html{
 	scroll-behavior: smooth;
 	height: 100%;
+	font-size: 1rem;
 }
 body{
 	padding-top: 55px;
@@ -46,6 +59,13 @@ body{
   font-weight: bold;
   display:inline;
 }
+
+
+
+
+
+
+
 
 .blinking-cursor {
   color: #2E3D48;
