@@ -9,13 +9,16 @@
 	<link href="https://fonts.googleapis.com/css?family=Lato|Montserrat|Open+Sans|Roboto&display=swap" rel="stylesheet">
 
 	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	
+
 
 
 </head>
 <body>
 
-
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark navi" style="background-color: #000000">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark navi" style="background-color: #000000" >
 
 	
   <a class="navbar-brand " href="#" >Hariviknesh S</a>
@@ -37,26 +40,24 @@
 
 
 
+<div id='preload' >
+	<img id='loadicon' src="loader.png"/>
+</div>
+<div id='main' style="display: none" >
 
-
-
-<div id="big" class="container-fluid ">
+<div id="big" class="container-fluid " style='height: 100vh'>
 	
-	<div class="row h-100  align-items-center  white">
+	<div class="row h-100  align-items-center  white" >
 
 		
 		<div class="col-12 pl-3  pl-lg-5">
-		  <p id="typewriter" data-typewriter="I write code,I develop android apps,I build ML models"></p><span class="blinking-cursor">|</span>
+		  <p id="typewriter" data-typewriter="I write code,I develop android apps,I build ML models, I develop web applications"></p><span class="blinking-cursor">|</span>
 </div>
 		</div>
 	</div>
-	</div>
-		
-		
-	</div>
-</div>
+	
 
-<div class="container-fluid " >
+<div class="container-fluid " style='height: 100vh'>
 	<div class="row  justify-content-center h-100 pt-5 " id="about" >
 		<div class=" col-12 mt-5">
 			<center class="mt-lg-5"><h2>Hi there</h2></center><br>
@@ -115,7 +116,7 @@
 				<a href="mailto:harivikneshs@gmail.com" class="btn card  border-danger  btn-outline-danger  m-lg-3 p-lg-4 mx-lg-5">
 					<h4>Email</h4>
 					
-					<h6>The best way to communicate with me</h6>
+					<h6>Write to me</h6>
 				</a>
 			</div>
 
@@ -138,14 +139,14 @@
 
 
 
-<div class="row  justify-content-center h-100 pt-5 PB-5" id="resume" style="margin-bottom:10%">	
+<div class="row  justify-content-center h-100 pt-5 PB-5" id="resume" style="margin-bottom: -60px">	
 	<div class=" col-12 mt-5 mb-3" ><center><h2>Resume</h2></center></div>
 			<div class="col-lg-9 col-12 mt-3">
 			<p class="px-lg-5">Thanks for spending your valuable time. Sure this site may not be exciting enough i agree. Stay tuned for further updates regarding my skills and projects in this website. <br><br>Check out my resume to know more about me and my projects</p>
 				<br>
 			
 		</div>
-		<div class="col-12"><center><a class="btn btn-dark mt-lg-5" href="resume_latest.pdf" style="font-size: 1.2rem; margin-bottom: 7%">Download Resume</a></center></div>
+		<div class="col-12"><center><a class="btn btn-dark mt-lg-5" href="resume.pdf" style="font-size: 1.2rem; ">Download Resume</a></center></div>
 		
 			</div>
 	
@@ -153,7 +154,7 @@
 
 
 
-<div class="row  align-items-center " style="background-color: black;">
+<div class="row  align-items-center " style="background-color: black;" style="height: 60px">
 		<div class="col-12 pt-3 pb-3 ">
 			<center><div style="color: white;font-family: 'Montserrat', sans-serif; font-size: 1.2em">Designed by me</div></center>
 		</div>
@@ -162,7 +163,7 @@
 </div>
 
 
-
+</div>
 
 
 
@@ -189,7 +190,7 @@
       i = 0,
       wordsObj = txt.split(" ")
     container.textContent = "";
-    console.log(txt)
+    //console.log(txt)
     runAllWords();
     function runAllWords() {
 
@@ -213,7 +214,7 @@
       }
       if (i === wordsObj.length) {
 
-        console.log('complete')
+        //console.log('complete')
       }
     }
 
@@ -250,6 +251,37 @@ function myLoop () {
 }
 
 myLoop();
+
+
+
+
+
+	
+
+
+
+
+$(document).ready(()=>{
+
+	var i=new Image();
+	i.src='images/landing.png'
+	i.onload=()=>{
+		$('#preload').css('display','none');
+		$('#main').css('display','block');
+		console.log('done');
+	}
+
+
+})
+
+
+
+
+
+
+
+
+
 </script>
 
 </body>
