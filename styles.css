@@ -22,18 +22,23 @@ body{
 
 #big{
 	background-image: url('images/landing.png');
-	height: 100%;
+	/* height: 100%; */
 	background-size: cover;
-	background-position: center;
+  background-position: center;
+  margin-top:-60px;
 }
 
 .white{
 	color: white;
 }
 
-.navi{
+#nav{
 	font-family: 'Montserrat', sans-serif;
-	font-weight: bold;
+  font-weight: bold;
+  animation-fill-mode: forwards;
+  
+ 
+  
 }
 
 .heading,h1,h2,h3,h4{
@@ -64,15 +69,31 @@ body{
   height: 100vh;
 }
 
+
+
 #loadicon{
-  filter: grayscale(100%) brightness(120%);
+
   
   width: 25vh; 
   height: 25vh;
   left:calc(100vw-25vh);
   top:calc(100vh-25vh);
-  animation:load 2s linear infinite;
+  animation:load 1s linear infinite;
 }
+
+
+@media only screen and (max-device-width:480px){
+  @keyframes down{
+    from{margin-top:-60px;display:none}
+    to{margin-top: 0px;display:flex}
+  }
+  
+  @keyframes up{
+    from{margin-top:0px;diplay:flex}
+    to{margin-top: -600px;display:none}
+  }
+}
+
 
 
 @keyframes load{

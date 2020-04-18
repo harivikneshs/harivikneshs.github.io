@@ -18,7 +18,7 @@
 </head>
 <body>
 
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark navi" style="background-color: #000000" >
+<nav id='nav' class="navbar fixed-top navbar-expand-md navbar-dark navi" style="background-color: #000000" >
 
 	
   <a class="navbar-brand " href="#" >Hariviknesh S</a>
@@ -45,7 +45,7 @@
 </div>
 <div id='main' style="display: none" >
 
-<div id="big" class="container-fluid " style="height: 100vh">
+<div id="big" class="container-fluid " style="height: 100vh; top:0px;">
 	
 	<div class="row h-100  align-items-center  white" >
 
@@ -57,7 +57,7 @@
 	</div>
 	
 
-<div class="container-fluid " >
+<div class="container-fluid "  >
 	<div class="row  justify-content-center h-100 pt-5 " id="about" >
 		<div class=" col-12 mt-5">
 			<center class="mt-lg-5"><h2>Hi there</h2></center><br>
@@ -256,9 +256,33 @@ function myLoop () {
 //myLoop();
 
 
+let s=0;
+
+$(document).on('scroll',()=>{
+		
+		console.log($(window).scrollTop())
+
+
+		if($(window).scrollTop()>s){
+			$('#nav').css('animation','up 0.5s  1 forwards')
+			
+		}
+		else{
+			if($(window).scrollTop()>$(window).height() || $(window).scrollTop()==0)
+			$('#nav').css('animation','down 0.5s  1 forwards')
+		}
+		
+		console.log($(window).height())
+		s=$(window).scrollTop()
+	
+		
+		
+
+	
 
 
 
+	})
 	
 
 
@@ -274,6 +298,9 @@ $(document).ready(()=>{
 		console.log('done');
 		myLoop();
 	}
+
+
+	
 
 
 })
