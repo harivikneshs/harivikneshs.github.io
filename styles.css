@@ -73,11 +73,11 @@ body{
 
 #loadicon{
 
-  
-  width: 25vh; 
-  height: 25vh;
-  left:calc(100vw-25vh);
-  top:calc(100vh-25vh);
+ 
+  width: 10vh; 
+  height: 10vh;
+  left:calc(100vw-10vh);
+  top:calc(100vh-10vh);
   animation:load 1s linear infinite;
 }
 
